@@ -27,7 +27,7 @@ if ( isDev ) {
 }
 
 // @ts-ignore
-mp.events.add( 'cef::eventManager', ( event: string, ...args: any ) => { //eslint-disable-line
+mp.events.add( 'cef::eventManager', ( event: string, ...args: any ) => { // eslint-disable-line
     for ( let i = 0; i < args.length; i++ ) {
         args[ i ] = parseObject( args[ i ] );
     }

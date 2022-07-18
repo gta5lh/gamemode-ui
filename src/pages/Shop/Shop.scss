@@ -1,0 +1,146 @@
+.shop {
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    
+    &-content {
+        margin-top: 5vh;
+        margin-left: 8.333333333333334vh;
+
+        width: 38.888888888888886vh;
+        height: 85.69444444444444vh;
+
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            padding-left:  1.5277777777777777vh;
+
+            width: 100%;
+            height: 7.013888888888888vh;
+
+            display: flex;
+            align-items: center;
+
+            background: #000000;
+
+            font-family: 'Beckett';
+            font-size: 4.166666666666667vh;
+            color: #fff;
+            text-shadow: 0.06944444444444445vh 0vh 0vh #000000;
+        }
+
+        &-main {
+            position: relative;
+
+            margin-top: 1.5277777777777777vh;
+
+            width: 100%;
+            height: 77.15277777777777vh;
+        }
+
+        &-list {
+            width: 100%;
+            height: 77.15277777777777vh;
+
+            display: flex;
+            flex-direction: column;
+
+            transition: all 0.3s;
+
+            overflow: hidden;
+
+            // mask-image: url(../../assets/images/shop/mask.svg);            
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &_hide {
+                opacity: 0;
+            }
+
+
+            &-box {
+                padding-left: 1.3888888888888888vh;
+
+                width: 100%;
+                height: 7.013888888888888vh;
+
+                display: flex;
+                align-items: center;
+
+                flex-shrink: 0;
+
+                background: rgba($color: #000000, $alpha: 0.9);
+
+                transition: opacity .3s ease, background .3s ease;
+
+                &:hover, &_active {
+                     background: rgba(28, 50, 27, 0.83) !important;
+                }
+
+                &:nth-child(even) {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+
+                & img {
+                    max-width: 5.347222222222222vh;
+                }
+
+                &-info {
+                    margin-left: 1.25vh;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    &__name {
+                        font-family: 'Bank Gothic Regular';
+                        font-size: 2.638888888888889vh;
+                        color: #fff;
+                        -webkit-text-stroke: 0.06944444444444445vh #000000;
+                        letter-spacing: -0.03em;
+                    }
+
+                    &__price {
+                        margin-top: -0.2777777777777778vh;
+                        font-family: 'Bank Gothic Regular';
+                        font-size: 2.361111111111111vh;
+                        color: #529B44;
+                        -webkit-text-stroke: 0.06944444444444445vh #000000;
+                        letter-spacing: -0.03em;
+                    }
+                }
+            }
+
+            &__clearBox {
+                width: 100%;
+                height: 7.013888888888888vh;
+                flex-shrink: 0;
+            }
+
+            &__security {
+                position: absolute;
+                bottom: 0;
+
+                width: 100%;
+                height: 7.013888888888888vh;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@media (aspect-ratio: 577/540) {
+    .shop-content {
+        zoom: 0.7;
+    }
+}
+
+@media (aspect-ratio: 4/3),(aspect-ratio: 5/4) {
+    .shop-content {
+        zoom: 0.8;
+    }
+}
